@@ -4,7 +4,8 @@
   "description": "Adonisjs application template",
   "main": "server.js",
   "scripts": {
-    "start": "node --harmony_proxies server.js"
+    "start": "node --harmony_proxies server.js",
+    "test": "ava test --serial --tap | tap-mocha-reporter spec"
   },
   "author": "adonisjs",
   "license": "MIT",
@@ -12,7 +13,7 @@
     "adonis-ace": "^2.0.6",
     "adonis-commands": "^2.0.2",
     "adonis-fold": "^2.0.1",
-    "adonis-framework": "^2.0.7",
+    "adonis-framework": "git+https://github.com/adonisjs/adonis-framework.git#develop",
     "adonis-lucid": "^2.0.3",
     "adonis-middleware": "^1.0.3",
     "ouch": "^0.2.0-beta"
@@ -20,5 +21,10 @@
   "autoload": {
     "App": "./app"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "ava": "^0.10.0",
+    "chai": "^3.4.1",
+    "tap-mocha-reporter": "0.0.22",
+    "zombie": "^4.2.1"
+  }
 }

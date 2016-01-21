@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+  <form action="{{ 'accounts.update' | route({id:1}) }}?_method=PUT" method="post">
+    {{ csrfField | safe }}
+    <input type="text" name="account_name" value="{{ account_name }}">
+    <input type="text" name="account_id" value="{{ id }}">
+    <button> Update Account </button>
+  </form>
+
+</body>
+</html>
