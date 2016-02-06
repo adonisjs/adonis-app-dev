@@ -13,38 +13,29 @@
 const Route = use('Route')
 
 Route.group('capibilities', function () {
+  Route
+    .get('/', 'RouteTestingController.index')
 
-  Route.get('/', function * (request, response) {
-    response.ok('i am done')
-  })
+  Route
+    .get('/profile', 'RouteTestingController.profile')
+    .formats(['json', 'html'])
 
-  Route.get('/profile', function * (request, response) {
-    switch (request.param('format')) {
-      case '.json':
-        response.ok({success: 'i am done'})
-        break
-      case '.html':
-        response.ok('<h2>i am done</h2>')
-        break
-      default:
-        response.ok('i am done')
-    }
-  }).formats(['json', 'html'])
+  Route
+    .get('/session', 'RouteTestingController.session')
 
-  Route.get('/session', function * (request, response) {
-    yield request.session.put('id', 1)
-    response.route('get-session')
-  })
+  Route
+    .get('/readSession', 'RouteTestingController.read')
+    .as('get-session')
 
-  Route.get('/readSession', function * (request, response) {
-    const id = yield request.session.get('id')
-    response.ok(id)
-  }).as('get-session')
-
-  Route.get('/users', function * (request, response) {
-    response.unauthorized('login first')
-  })
+  Route
+    .get('/users', 'RouteTestingController.users')
 
   Route.resource('accounts', 'AccountsController')
-
 }).prefix('/capibilities')
+
+Route.group('flash', function () {
+  Route
+    .get('/', 'FlashTestingController.create')
+  Route
+    .post('/', 'FlashTestingController.store')
+}).prefix('/flash')
