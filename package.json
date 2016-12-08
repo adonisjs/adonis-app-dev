@@ -16,15 +16,15 @@
     "adonis-framework": "git+https://github.com/adonisjs/adonis-framework.git#develop",
     "adonis-lucid": "git@github.com:adonisjs/adonis-lucid.git#develop",
     "adonis-middleware": "git@github.com:adonisjs/adonis-middleware.git#develop",
-    "ouch": "^0.2.0-beta"
+    "ouch": "^1.0.0"
   },
   "autoload": {
     "App": "./app"
   },
   "devDependencies": {
-    "ava": "^0.10.0",
+    "ava": "^0.17.0",
     "chai": "^3.4.1",
-    "tap-mocha-reporter": "0.0.22",
-    "zombie": "^4.2.1"
+    "tap-mocha-reporter": "3.0.0",
+    "zombie": "^5.0.5"
   }
 }
