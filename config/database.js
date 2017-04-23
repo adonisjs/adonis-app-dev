@@ -24,7 +24,7 @@ module.exports = {
   | Here is your chance to override it.
   |
   */
-   migrationsTable: 'adonis_schema',
+  migrationsTable: 'adonis_schema',
 
   /*
   |--------------------------------------------------------------------------
@@ -73,12 +73,12 @@ module.exports = {
     }
   }
 
-/*
-|--------------------------------------------------------------------------
-|   Feel Free
-|--------------------------------------------------------------------------
-|
-|  Feel free to define as many connections you like to define.
-|
-*/
+  /*
+  |--------------------------------------------------------------------------
+  |   Feel Free
+  |--------------------------------------------------------------------------
+  |
+  |  Feel free to define as many connections you like to define.
+  |
+  */
 }

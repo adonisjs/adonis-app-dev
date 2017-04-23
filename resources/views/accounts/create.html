@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+  <form action="{{ 'accounts.store' | route() }}" method="post">
+    {{ csrfField | safe }}
+    <input type="text" name="account_name">
+    <input type="text" name="account_id">
+    <button> Create Account </button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <form action="/flash" method="POST">
+    {{ csrfField | safe }}
+    <input type="text" name="name">
+    <input type="text" name="email">
+    <button> Submit </button>
+  </form>
+</body>
+</html>

@@ -14,7 +14,7 @@ module.exports = {
   | cookies encrypted
   |
   */
-  appKey: Env.get('APP_KEY', 'secretKey'),
+  appKey: Env.get('APP_KEY'),
 
   encryption: {
     /*
