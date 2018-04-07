@@ -25,6 +25,6 @@
     "ava": "^0.17.0",
     "chai": "^3.4.1",
     "tap-mocha-reporter": "3.0.0",
-    "zombie": "^5.0.5"
+    "zombie": "^6.1.1"
   }
 }
